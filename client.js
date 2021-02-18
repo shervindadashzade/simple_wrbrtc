@@ -7,6 +7,11 @@ const remoteId = document.getElementById('remoteId');
 const peer = new Peer({
     config: {'iceServers': [
       { url: 'stun:stun.l.google.com:19302' },
+      {
+          urls : 'turn:188.211.141.177:3478',
+          username : "shervin",
+          credential : "123456"
+      }
     ]} /* Sample servers, please use appropriate ones */
   });;
 
