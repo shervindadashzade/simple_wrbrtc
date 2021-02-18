@@ -4,7 +4,11 @@ const myId = document.getElementById('myId');
 const callBtn = document.getElementById('call');
 const hangoutBtn = document.getElementById('hangout');
 const remoteId = document.getElementById('remoteId');
-const peer = new Peer();
+const peer = new Peer({
+    config: {'iceServers': [
+      { url: 'stun:stun.l.google.com:19302' },
+    ]} /* Sample servers, please use appropriate ones */
+  });;
 var isCalle = false;
 var connection = null;
 var call_confirm;
