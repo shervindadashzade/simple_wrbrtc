@@ -9,6 +9,7 @@ const peer = new Peer({
       { url: 'stun:stun.l.google.com:19302' },
     ]} /* Sample servers, please use appropriate ones */
   });;
+
 var isCalle = false;
 var connection = null;
 var call_confirm;
@@ -24,6 +25,7 @@ async function init(){
     try{
         stream = await navigator.mediaDevices.getUserMedia(constraints);
         myVideo.srcObject = stream;
+        myVideo.muted = true
     }catch(e){
         console.log(e);
     }
