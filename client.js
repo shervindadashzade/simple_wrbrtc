@@ -8,7 +8,7 @@ const peer = new Peer({
     config: {'iceServers': [
       { url: 'stun:stun.l.google.com:19302' },
       {
-          urls : 'turn:51.68.142.19:3478',
+          urls : 'turn:5.239.182.180:3478',
           username : "shervin",
           credential : "123456"
       }
